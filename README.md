@@ -89,6 +89,19 @@ forge doctor
 
 Forge CLI pulls components from the **[Forge Registry](https://github.com/longgoll/forge-registry)**. The registry acts as the "menu" of all available code snippets, automatically keeping your CLI updated without needing to download a new binary.
 
+## 🤝 Contributing (We are in BETA!)
+
+CoreForge is currently in **v1.0.0-beta**. This is a **100% Free & Open Source** passion project.
+There is absolutely no strict licensing, no paywalls, and no vendor lock-in!
+
+We built this to solve our own headaches as backend developers, and we want to hear from you.
+
+- Found a bug? 🐛 **Open an Issue**
+- Have an idea for a component? 💡 **Start a Discussion**
+- Want to add your own stack or blueprint? 🛠️ **Submit a PR!**
+
+Let's build the ultimate "shadcn for backend" together!
+
 ## 📄 License
 
-MIT © [longgoll](https://github.com/longgoll)
+Do whatever you want with the code. It's yours now! (MIT License) © [longgoll](https://github.com/longgoll)
