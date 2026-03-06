@@ -12,17 +12,24 @@ export default async function UnderstandingComponentsPage({ params }: { params: 
     const { locale } = resolvedParams;
     const t = await getTranslations({ locale, namespace: "Docs" });
 
-    // Fetch Markdown Documentation
-    const docsMarkdown = await getGeneralDocs("understanding-components", locale);
+    // Use translations as markdown source
+    const markdownSource = `
+${t("uc_p1")}
 
-    // Remove basic frontmatter
-    let cleanedDocs = docsMarkdown || '';
-    if (cleanedDocs.startsWith('---')) {
-        const endOfFrontmatter = cleanedDocs.indexOf('---', 3);
-        if (endOfFrontmatter !== -1) {
-            cleanedDocs = cleanedDocs.substring(endOfFrontmatter + 3).trim();
-        }
-    }
+## ${t("uc_how_title")}
+${t("uc_how_desc")}
+
+${t("uc_how_desc2")}
+
+## ${t("uc_use_title")}
+${t("uc_use_desc")}
+- ${t("uc_benefit1")}
+- ${t("uc_benefit2")}
+- ${t("uc_benefit3")}
+
+## ${t("uc_summary_title")}
+${t("uc_summary")}
+    `;
 
     return (
         <main className="relative py-6 lg:py-8 w-full max-w-3xl mx-auto md:mx-0">
@@ -37,16 +44,13 @@ export default async function UnderstandingComponentsPage({ params }: { params: 
                     <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl mb-10">{t("uc_title")}</h1>
                 </div>
 
-                {/* Render the markdown content */}
-                {cleanedDocs && (
-                    <div className="mb-14">
-                        <MDXRemote
-                            source={cleanedDocs}
-                            components={useMDXComponents({})}
-                            options={{ mdxOptions: { remarkPlugins: [remarkGfm] } }}
-                        />
-                    </div>
-                )}
+                <div className="mb-14">
+                    <MDXRemote
+                        source={markdownSource}
+                        components={useMDXComponents({})}
+                        options={{ mdxOptions: { remarkPlugins: [remarkGfm] } }}
+                    />
+                </div>
             </div>
 
             <div className="hidden xl:block">
