@@ -6,7 +6,7 @@
         "searchPlaceholder": "Search documentation..."
     },
     "Hero": {
-        "badge": "🎉 CoreForge v2.0 is live — Explore it now",
+        "badge": "🎉 CoreForge v1.0.0-beta is live — Explore it now",
         "title1": "Stop writing the same",
         "title2": "Backend Boilerplate.",
         "subtitle": "Beautiful, production-ready backend components for Express, .NET, and Gin. Copy, paste, and own the code 100%. No magic, no vendor lock-in.",

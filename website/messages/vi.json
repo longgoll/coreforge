@@ -6,7 +6,7 @@
         "searchPlaceholder": "Tìm kiếm tài liệu..."
     },
     "Hero": {
-        "badge": "🎉 CoreForge v2.0 đã ra mắt — Khám phá ngay",
+        "badge": "🎉 CoreForge v1.0.0-beta đã ra mắt — Khám phá ngay",
         "title1": "Ngừng viết đi viết lại",
         "title2": "Backend Boilerplate.",
         "subtitle": "Các component chuẩn production tuyệt đẹp cho Express, .NET và Gin. Copy, dán và sở hữu code 100%. Không vendor lock-in.",
