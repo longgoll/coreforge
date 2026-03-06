@@ -1,10 +1,3 @@
-import fs from "fs";
-import path from "path";
-
-// Define paths
-const REGISTRY_PATH = path.join(process.cwd(), "..", "forge-registry");
-const MANIFEST_FILE = path.join(REGISTRY_PATH, "manifest.json");
-
 export interface RegistryComponent {
   description: string;
   category: string;
@@ -27,17 +20,20 @@ export interface RegistryManifest {
   components: { [key: string]: RegistryComponent };
 }
 
-let manifestCache: RegistryManifest | null = null;
+const REPO_OWNER = 'longgoll';
+const REPO_NAME = 'forge-registry';
+const BRANCH = 'main';
+
+const BASE_URL = `https://raw.githubusercontent.com/${REPO_OWNER}/${REPO_NAME}/${BRANCH}`;
+const MANIFEST_URL = `${BASE_URL}/manifest.json`;
 
 export async function getRegistry(): Promise<RegistryManifest> {
-  if (manifestCache) return manifestCache;
-
   try {
-    const fileContent = await fs.promises.readFile(MANIFEST_FILE, "utf-8");
-    manifestCache = JSON.parse(fileContent);
-    return manifestCache!;
+    const res = await fetch(MANIFEST_URL, { next: { revalidate: 3600 } });
+    if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
+    return await res.json();
   } catch (error) {
-    console.error("Failed to read registry source:", error);
+    console.error("Failed to fetch registry source:", error);
     return { blueprints: {}, components: {} };
   }
 }
@@ -53,13 +49,19 @@ export async function getComponentFileContent(
   fileUrl: string,
 ): Promise<string> {
   try {
-    // fileUrl is like "./mock-registry/components/nodejs_express/error-handler/errorHandler.js" or "./forge-registry/..."
-    // remove the prefix because we are already relative to coreforge root
-    const normalizedPath = fileUrl.replace('./mock-registry/', '').replace('./forge-registry/', '');
-    const fullPath = path.join(REGISTRY_PATH, normalizedPath);
-    return await fs.promises.readFile(fullPath, "utf8");
-  } catch {
-    console.error(`Failed to read source file: ${fileUrl}`);
+    // If the fileUrl is already a full URL (which manifest should provide)
+    // or if it's a relative path starting with './mock-registry/' or './forge-registry/'
+    let url = fileUrl;
+    if (!fileUrl.startsWith('http')) {
+      const normalizedPath = fileUrl.replace(/^\.\/(mock-registry|forge-registry)\//, '');
+      url = `${BASE_URL}/${normalizedPath}`;
+    }
+
+    const res = await fetch(url, { next: { revalidate: 3600 } });
+    if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
+    return await res.text();
+  } catch (error) {
+    console.error(`Failed to fetch source file: ${fileUrl}`, error);
     return `// Error loading file: ${fileUrl}\n// Please make sure the file exists in the registry.`;
   }
 }
@@ -68,36 +70,26 @@ export async function getComponentDocs(
   slug: string,
   locale: string = "en",
 ): Promise<string | null> {
-  const docsDir = path.join(REGISTRY_PATH, "components", "docs");
+  const docsPaths = [
+    `components/docs/${locale}/${slug}.md`,
+    `components/docs/en/${slug}.md`,
+    `components/docs/${slug}.${locale}.md`,
+    `components/docs/${slug}.en.md`,
+    `components/docs/${slug}.md`
+  ];
 
-  // Directory-based paths
-  const dirLocalizedPath = path.join(docsDir, locale, `${slug}.md`);
-  const dirFallbackEnglishPath = path.join(docsDir, "en", `${slug}.md`);
-
-  // Legacy file extension paths
-  const localizedPath = path.join(docsDir, `${slug}.${locale}.md`);
-  const fallbackEnglishPath = path.join(docsDir, `${slug}.en.md`);
-  const legacyPath = path.join(docsDir, `${slug}.md`);
-
-  try {
-    if (fs.existsSync(dirLocalizedPath)) {
-      return await fs.promises.readFile(dirLocalizedPath, "utf8");
+  for (const docPath of docsPaths) {
+    try {
+      const url = `${BASE_URL}/${docPath}`;
+      const res = await fetch(url, { next: { revalidate: 3600 } });
+      if (res.ok) {
+        return await res.text();
+      }
+    } catch (error) {
+      // Ignore and continue trying next fallback path
     }
-    if (fs.existsSync(dirFallbackEnglishPath)) {
-      return await fs.promises.readFile(dirFallbackEnglishPath, "utf8");
-    }
-    if (fs.existsSync(localizedPath)) {
-      return await fs.promises.readFile(localizedPath, "utf8");
-    }
-    if (fs.existsSync(fallbackEnglishPath)) {
-      return await fs.promises.readFile(fallbackEnglishPath, "utf8");
-    }
-    if (fs.existsSync(legacyPath)) {
-      return await fs.promises.readFile(legacyPath, "utf8");
-    }
-  } catch (error) {
-    console.error(`Error reading docs for ${slug}:`, error);
   }
+  
   return null;
 }
 
@@ -105,29 +97,24 @@ export async function getGeneralDocs(
   slug: string,
   locale: string = "en",
 ): Promise<string | null> {
-  const docsDir = path.join(REGISTRY_PATH, "docs");
+  const docsPaths = [
+    `docs/${locale}/${slug}.md`,
+    `docs/en/${slug}.md`,
+    `docs/${slug}.${locale}.md`,
+    `docs/${slug}.en.md`
+  ];
 
-  const dirLocalizedPath = path.join(docsDir, locale, `${slug}.md`);
-  const dirFallbackEnglishPath = path.join(docsDir, "en", `${slug}.md`);
-
-  const localizedPath = path.join(docsDir, `${slug}.${locale}.md`);
-  const fallbackEnglishPath = path.join(docsDir, `${slug}.en.md`);
-
-  try {
-    if (fs.existsSync(dirLocalizedPath)) {
-      return await fs.promises.readFile(dirLocalizedPath, "utf8");
+  for (const docPath of docsPaths) {
+    try {
+      const url = `${BASE_URL}/${docPath}`;
+      const res = await fetch(url, { next: { revalidate: 3600 } });
+      if (res.ok) {
+        return await res.text();
+      }
+    } catch (error) {
+      // Ignore and continue trying next fallback path
     }
-    if (fs.existsSync(dirFallbackEnglishPath)) {
-      return await fs.promises.readFile(dirFallbackEnglishPath, "utf8");
-    }
-    if (fs.existsSync(localizedPath)) {
-      return await fs.promises.readFile(localizedPath, "utf8");
-    }
-    if (fs.existsSync(fallbackEnglishPath)) {
-      return await fs.promises.readFile(fallbackEnglishPath, "utf8");
-    }
-  } catch (error) {
-    console.error(`Error reading general docs for ${slug}:`, error);
   }
+  
   return null;
 }
