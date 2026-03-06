@@ -1,0 +1,90 @@
+{
+  "language": "nodejs",
+  "framework": "express",
+  "sourceDir": "./src",
+  "installedComponents": [
+    {
+      "name": "error-handler",
+      "version": "1.0.0",
+      "installedAt": "2026-02-27T15:05:06+07:00"
+    },
+    {
+      "name": "jwt-auth",
+      "version": "1.0.0",
+      "installedAt": "2026-02-27T15:05:38+07:00"
+    },
+    {
+      "name": "logger",
+      "version": "1.0.0",
+      "installedAt": "2026-02-27T15:33:53+07:00"
+    },
+    {
+      "name": "file-upload",
+      "version": "1.0.0",
+      "installedAt": "2026-03-01T00:38:47+07:00",
+      "fileHashes": {
+        "middlewares/uploadMiddleware.js": "185777fe2f89165938c87204b44ac8febe6a7061ea7b31953ab6df7a851e5f6f",
+        "services/uploadService.js": "95009a9293b5f9722706f89b3e04fd2335a798be123a78e50628f19f0e63841a"
+      }
+    },
+    {
+      "name": "email-service",
+      "version": "1.0.0",
+      "installedAt": "2026-03-01T00:42:51+07:00",
+      "fileHashes": {
+        "services/emailService.js": "53e20e5e25273e547891320516cb25fb0c9abdbd534b7307445aa7aeeecb0cdb"
+      }
+    },
+    {
+      "name": "oauth",
+      "version": "1.0.0",
+      "installedAt": "2026-03-01T00:46:11+07:00",
+      "fileHashes": {
+        "auth/oauthHandlers.js": "9aa68902cd8a9d1bfe94a8a10e60c90c2a77e740d41c6157d963033b4f60b729"
+      }
+    },
+    {
+      "name": "redis-cache",
+      "version": "1.0.0",
+      "installedAt": "2026-03-01T00:49:37+07:00",
+      "fileHashes": {
+        "services/redisService.js": "04b322916060709bac1b575598557e644d0dc60759f4629a8715df0bde7fb1b9"
+      }
+    },
+    {
+      "name": "background-jobs",
+      "version": "1.0.0",
+      "installedAt": "2026-03-01T00:52:16+07:00",
+      "fileHashes": {
+        "services/cronService.js": "ec8c6a4ee7b65259ddce9f25866997a6571b618e6ce8d62a4d59cbf8b1ecb9ca"
+      }
+    },
+    {
+      "name": "database-connection",
+      "version": "1.0.0",
+      "installedAt": "2026-03-01T00:57:44+07:00",
+      "fileHashes": {
+        "config/database.js": "758f24a42e081567475e56c9035cfe04f0706834a70e51e6d88401d5c4f38d7b"
+      }
+    },
+    {
+      "name": "database-validator",
+      "version": "1.0.0",
+      "installedAt": "2026-03-01T01:00:58+07:00",
+      "fileHashes": {
+        "middlewares/validators/validateIntegerId.js": "3797b163b7dd351637348ebbff3f4b9de47eadbb3e60e2bf390d028895a7a352",
+        "middlewares/validators/validateObjectId.js": "ee6d5839e6942a0df89ecd5b5ba4081683ea991ff9c6aeb5000d65656c0c90f9",
+        "middlewares/validators/validateUuid.js": "b4503e1db3a841ad5d44e5a6d049d3613a6ad79da55f2670a1dfdceff59a60a8"
+      }
+    },
+    {
+      "name": "http-status-codes",
+      "version": "1.0.0",
+      "installedAt": "2026-03-01T01:02:05+07:00",
+      "fileHashes": {
+        "constants/httpStatusCodes.js": "4ebe4f2161362e18634ccf60b0e69060ba91ad93f25e81a5e9c285044b1fe971"
+      }
+    }
+  ],
+  "configVersion": "1.0"
+}

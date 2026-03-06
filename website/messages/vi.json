@@ -1,0 +1,142 @@
+{
+    "Navigation": {
+        "docs": "Tài liệu",
+        "components": "Thành phần",
+        "patterns": "Mẫu kiến trúc",
+        "searchPlaceholder": "Tìm kiếm tài liệu..."
+    },
+    "Hero": {
+        "badge": "🎉 CoreForge v2.0 đã ra mắt — Khám phá ngay",
+        "title1": "Ngừng viết đi viết lại",
+        "title2": "Backend Boilerplate.",
+        "subtitle": "Các component chuẩn production tuyệt đẹp cho Express, .NET và Gin. Copy, dán và sở hữu code 100%. Không vendor lock-in.",
+        "getStarted": "Khám phá ngay",
+        "browseComponents": "Xem các tính năng"
+    },
+    "Features": {
+        "title": "Tại sao chọn CoreForge?",
+        "f1_title": "Own Your Stack",
+        "f1_desc": "Không phải npm package hộp đen. Chúng tôi đẩy source code thẳng vào src/ của bạn. Bạn tự do sửa đổi mà không sợ dính vendor lock-in.",
+        "f2_title": "Tự động cài Dependencies",
+        "f2_desc": "Quên việc check docs xem cần cài thư viện gì đi. Tìm thêm jwt? Rẹt một cái, CLI tự động chạy cài đặt thư viện phụ thuộc giúp bạn.",
+        "f3_title": "Universal Arsenal",
+        "f3_desc": "Viết Node hôm nay, nhảy sang Go ngày mai? Cùng một tập hợp lệnh `forge add`, áp dụng chuẩn xác cho 3 hệ sinh thái phổ biến nhất.",
+        "f4_title": "Chất lượng Production-Ready",
+        "f4_desc": "Không phải mã nguồn mẫu đồ chơi. Các component được viết chuẩn Production: Rate Limiting, RBAC, Hashing với kiến trúc bài bản."
+    },
+    "HowItWorks": {
+        "title": "Chỉ 3 Bước Đơn Giản",
+        "step1_title": "1. Khởi tạo dự án",
+        "step1_desc": "Bắt đầu với dự án của riêng bạn ở bất kỳ nền tảng nào (Express, .NET, Go).",
+        "step2_title": "2. Chọn tính năng",
+        "step2_desc": "Khám phá các mảnh ghép hệ thống có sẵn trên thư viện CoreForge.",
+        "step3_title": "3. Cài đặt tự động",
+        "step3_desc": "Gõ lệnh `forge add [tên component]` để hệ thống lắp ráp mã nguồn sẵn vào dự án."
+    },
+    "FAQ": {
+        "title": "Những Câu Hỏi Thường Gặp",
+        "q1": "Tôi có bị ép phải dùng toàn bộ thư viện không?",
+        "a1": "Hoàn toàn không. Mỗi tính năng là độc lập. Bạn có thể chỉ lấy mỗi 'Xử lý lỗi' về dùng và bỏ qua mọi thứ khác.",
+        "q2": "Có bị tính phí hay giới hạn gì không?",
+        "a2": "Miễn phí 100% và Mã nguồn mở. Không có bất kỳ chi phí ẩn nào.",
+        "q3": "Mã nguồn tải về tôi có được phép sửa đổi không?",
+        "a3": "Tất nhiên! File mã nguồn sẽ được copy thẳng vào thư mục dự án của bạn (chứ không phải nằm ẩn trong node_modules). Từ lúc đó dòng code là của bạn, bạn muốn thay đổi thế nào tùy ý."
+    },
+    "CTA": {
+        "title": "Ngưng Xây Bánh Xe Lại Từ Đầu",
+        "subtitle": "Bắt đầu xây dựng hệ thống nhanh hơn, an toàn hơn với CoreForge ngay hôm nay.",
+        "action": "Bắt đầu với CoreForge ngay"
+    },
+    "Footer": {
+        "builtWith": "Hình hài kiến tạo bởi Next.js, Tailwind CSS và shadcn/ui. Linh hồn mở được dệt nên bởi",
+        "terms": "Điều khoản Thỏa thuận",
+        "privacy": "Bảo mật Tối thượng"
+    },
+    "Docs": {
+        "into_title": "CoreForge Là Gì?",
+        "intro_p1": "Trang tài liệu này dành cho bất kỳ ai muốn nắm bắt cách CoreForge hoạt động chỉ trong vài phút. Khi xây dựng các phần mềm, người lập trình hay gặp một nỗi đau lớn: dự án nào cũng phải mất hàng tuần ngồi loay hoay cài đặt, cấu hình, xử lý lại hệ thống đăng nhập, hệ thống bảo mật từ con số không.",
+        "intro_p2": "Nếu coi một dự án phần mềm như một chiếc xe ô tô thì CoreForge là xưởng gia công. Chúng tôi không chỉ bán luôn nguyên một chiếc xe (bạn dùng không quen thì không sửa được). Chúng tôi cấp cho bạn bánh lái, máy bơm xăng, màn hình LCD loại tốt nhất. Bạn lấy nó đem về và tự do ráp vào xe của riêng mình. Bạn sở hữu hoàn toàn.",
+        "intro_why_title": "Tại sao không dùng thư viện có sẵn (NPM/Nuget)?",
+        "intro_why_p1": "Việc sử dụng các thư viện có sẵn (như trên NPM hay NuGet) rất phổ biến, nhưng chúng có một điểm yếu chết người: **Bạn không sở hữu mã code của chúng**. Nó là một 'hộp đen'. Nếu một ngày đẹp trời bạn cần đổi một logic nhỏ bên trong, bạn không thể làm được. Nếu tác giả ngừng hỗ trợ, dự án của bạn mắc kẹt.",
+        "intro_why_p2": "CoreForge đi theo một triết lý khác hoàn toàn. Thay vì tải về một gói thư viện bị đóng gói kín, công cụ của chúng tôi sẽ **copy trực tiếp mã code chất lượng cao vào trong ổ đĩa dự án của bạn**. Từ giây phút đó, đoạn code đó là của chính bạn. Bạn có thể mở nó ra, đọc hiểu, thêm bớt, cắt ngắt tùy thích.",
+        "intro_features_title": "Điểm Nổi Bật Tuyệt Đối",
+        "intro_feat1_title": "Quyền Lưu Trữ Dữ Liệu",
+        "intro_feat1_desc": "Mọi logic, mã nguồn đều nằm trên máy của bạn. Không có lời gọi (API call) ẩn nào về server của chúng tôi.",
+        "intro_feat2_title": "Đẹp & Tuân Thủ Chuẩn Mực",
+        "intro_feat2_desc": "Code được viết theo phong cách rất đẹp, sạch sẽ, tuân thủ nguyên tắc SOLID và dễ dàng để mở rộng.",
+        "install_title": "Cài Đặt & Khởi Tạo",
+        "install_p1": "Bạn không cần tải cả một dự án nặng nề. Bạn chỉ cần sử dụng CLI của chúng tôi để 'kéo' đúng đoạn code bạn cần vào dự án đang có.",
+        "install_req": "Yêu Cầu Hệ Thống",
+        "install_req_desc": "Để có trải nghiệm tốt nhất, máy tính của bạn cần được cài đặt sẵn:",
+        "install_step1": "1. Cài đặt CoreForge CLI",
+        "install_step1_desc": "Máy tính của bạn cần dùng Go để tải và cài đặt CLI của chúng tôi về làm công cụ toàn cục (global tool):",
+        "install_step2": "2. Khởi tạo & Cấu hình (init)",
+        "install_step2_desc": "Mở Terminal tại gốc dự án của bạn và gõ dòng lệnh khởi tạo. Một giao diện (TUI) sẽ hiện ra hỏi bạn về kỹ thuật đang dùng (Ngôn ngữ, Framework, Database, ORM...). CoreForge sẽ ghi chép lại những tuỳ chọn này vào file `forge.json` để tải đúng loại mã nguồn về.",
+        "install_step3": "3. Cài đặt Component đầu tiên",
+        "install_step3_desc": "Bây giờ bạn đã sẵn sàng! Thử cài đặt một component cơ bản như Hệ thống xử lý lỗi. Mã nguồn sẽ được rơi đúng vào thư mục bạn đã cấu hình.",
+        "install_step4": "4. Tự Do Tùy Biến",
+        "install_step4_desc": "Sau khi lệnh chạy xong, hãy mở dự án lên. Bạn sẽ thấy các tệp tin mới toanh. Mở chúng ra, đọc và chỉnh sửa bất cứ thứ gì bạn muốn.",
+        "uc_title": "Bản Chất Của Component Lấy Về Là Gì?",
+        "uc_p1": "Nếu bạn chưa quen với việc lập trình, từ 'Component' (hay Thành phần) nghe có vẻ phức tạp. Nhưng thực tế, nó chỉ đơn giản là một 'Tệp tin văn bản chứa sẵn quy tắc' (Code File) mà ai đó đã viết thay bạn.",
+        "uc_how_title": "1. Điều gì xảy ra khi bạn tải nó về?",
+        "uc_how_desc": "Giả sử bạn cần làm một tính năng 'Khóa cửa nhà' (Đăng nhập mật khẩu). Thay vì tự lên mạng tìm hiểu xem nên dùng ổ khóa loại gì, chốt cửa ra sao... Bạn gõ lệnh `coreforge add password-hashing`.",
+        "uc_how_desc2": "Lúc này hệ thống CoreForge không cài đặt một phần mềm đen đúa phức tạp nào cả. Nó chỉ đơn giản chạy lên kho lưu trữ của chúng tôi, lấy đúng đoạn văn bản chứa bí kíp khóa cửa an toàn nhất thế giới, rồi copy/paste tạo ra một file `passwordHashing.js` (hoặc C#, Go) ngay trong chính ổ đĩa dự án của bạn.",
+        "uc_use_title": "2. Sử dụng như thế nào?",
+        "uc_use_desc": "Bây giờ bạn mở mã nguồn lên, bạn sẽ thấy file đó nằm ngay ngắn trong thư mục giống hệt như việc người đồng nghiệp của bạn vừa ngồi gõ ra nó hôm qua. Thậm chí có đủ cả ghi chú tiếng Việt (nếu có). Điểm tuyệt vời là:",
+        "uc_benefit1": "Bạn có thể đọc để hiểu cách nó hoạt động.",
+        "uc_benefit2": "Bạn có thể nối file đó vào chương trình chính để dùng luôn.",
+        "uc_benefit3": "Bạn có thể thoải mái thêm/bớt. Giả sử mã nguồn gốc ghi thông báo lỗi là 'Sai mật khẩu', bạn hoàn toàn có quyền mở file ra sửa đoạn chữ đó thành 'Bấm sai rồi bạn ơi 😘' mà không bị bất kỳ rào cản nền tảng nào ngăn cấm.",
+        "uc_summary_title": "Tóm lại",
+        "uc_summary": "Tóm lại, CoreForge giống như một kho kịch bản phim hay nhất. Khi bạn cần đóng vai Đăng nhập, chúng tôi ném bản thảo kịch bản hoàn hảo vào tay bạn. Việc diễn thế nào, chế lời thoại ra sao là quyền của bạn. Bạn không bao giờ bị 'bắt cóc' vào một hệ sinh thái đóng nào cả!"
+    },
+    "DocsSidebar": {
+        "gettingStarted": "Bắt Đầu",
+        "introduction": "Giới thiệu",
+        "installation": "Cài đặt",
+        "understandingComponents": "Component Là Gì?",
+        "categories": {
+            "Auth": "Xác Thực",
+            "Documentation": "Tài Liệu",
+            "Middleware": "Middleware",
+            "Utility": "Tiện Ích"
+        },
+        "components": {
+            "generate-otp": "Tạo OTP",
+            "jwt-auth": "Xác Thực JWT",
+            "password-hashing": "Băm Mật Khẩu",
+            "rbac": "Phân Quyền RBAC",
+            "swagger-docs": "Tài Liệu Swagger",
+            "async-handler": "Xử Lý Bất Đồng Bộ",
+            "cors": "CORS",
+            "error-handler": "Xử Lý Lỗi Tập Trung",
+            "logger": "Ghi Nhật Ký (Logger)",
+            "not-found-handler": "Xử Lý Lỗi 404",
+            "rate-limiter": "Giới Hạn Tốc Độ",
+            "security-headers": "Tiêu Đề Bảo Mật",
+            "validation": "Kiểm Tra Dữ Liệu",
+            "pagination": "Phân Trang",
+            "shutdown-handler": "Tắt Graceful"
+        }
+    },
+    "ComponentsList": {
+        "title": "Thành phần",
+        "description": "Các component backend chuẩn production tuyệt đẹp. Chỉ việc Copy, dán và tùy biến 100%.",
+        "categories": {
+            "auth": "Xác Thực",
+            "middleware": "Middleware",
+            "utility": "Tiện Ích",
+            "utilities": "Tiện Ích",
+            "database": "Cơ Sở Dữ Liệu",
+            "general": "Chung",
+            "documentation": "Tài Liệu API",
+            "communication": "Giao Tiếp",
+            "message-broker": "Message Broker",
+            "observability": "Giám Sát",
+            "payment": "Thanh Toán",
+            "real-time": "Thời Gian Thực",
+            "search": "Tìm Kiếm",
+            "security": "Bảo Mật",
+            "storage": "Lưu Trữ"
+        }
+    }
+}

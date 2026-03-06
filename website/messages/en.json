@@ -1,0 +1,142 @@
+{
+    "Navigation": {
+        "docs": "Docs",
+        "components": "Components",
+        "patterns": "Patterns",
+        "searchPlaceholder": "Search documentation..."
+    },
+    "Hero": {
+        "badge": "🎉 CoreForge v2.0 is live — Explore it now",
+        "title1": "Stop writing the same",
+        "title2": "Backend Boilerplate.",
+        "subtitle": "Beautiful, production-ready backend components for Express, .NET, and Gin. Copy, paste, and own the code 100%. No magic, no vendor lock-in.",
+        "getStarted": "Explore now",
+        "browseComponents": "View all blocks"
+    },
+    "Features": {
+        "title": "Why CoreForge?",
+        "f1_title": "Own Your Stack",
+        "f1_desc": "Not an NPM package. We push source code straight into your root directory. You are entirely free to modify it without being locked into our ecosystem.",
+        "f2_title": "Auto-resolving Dependencies",
+        "f2_desc": "Forget checking docs to see what libraries to install. Need JWT? Bam, the CLI automatically runs the required install commands for you.",
+        "f3_title": "Universal Arsenal",
+        "f3_desc": "Writing Node.js today, migrating to Go tomorrow? One identical set of `forge add` commands applies flawlessly to the 3 most popular backend ecosystems.",
+        "f4_title": "Battle-tested Defaults",
+        "f4_desc": "No toy boilerplate files. Every component is written for true Production environments: Rate Limiting, RBAC, and Password Hashing with the highest security standards."
+    },
+    "HowItWorks": {
+        "title": "Just 3 Simple Steps",
+        "step1_title": "1. Initialize Project",
+        "step1_desc": "Start with any framework you're familiar with (Next.js, Express, .NET, Go).",
+        "step2_title": "2. Choose Components",
+        "step2_desc": "Browse the CoreForge library and find the exact architectural block you need.",
+        "step3_title": "3. Run & Enjoy",
+        "step3_desc": "Use the CLI `forge add [name]` to seamlessly inject production-grade code into your project."
+    },
+    "FAQ": {
+        "title": "Frequently Asked Questions",
+        "q1": "Am I forced to use the entire framework?",
+        "a1": "Absolutely not. Each component is independent. Just pick what you like. You can grab just the Error Handler module and ignore the rest.",
+        "q2": "Is it completely free?",
+        "a2": "Yes, it is 100% open-source. No hidden fees, no subscriptions.",
+        "q3": "Can I modify the code after downloading?",
+        "a3": "Of course! The code files are copied directly into your project's directory. From that moment on, the code is yours to tweak and customize endlessly."
+    },
+    "CTA": {
+        "title": "Stop Reinventing the Wheel",
+        "subtitle": "Start building faster and highly secure systems with CoreForge today.",
+        "action": "Get Started with CoreForge"
+    },
+    "Footer": {
+        "builtWith": "Form sculpted by Next.js, Tailwind CSS and shadcn/ui. The open soul woven by",
+        "terms": "Terms of Accord",
+        "privacy": "Ultimate Privacy"
+    },
+    "Docs": {
+        "into_title": "What is CoreForge?",
+        "intro_p1": "This document is for anyone who wants to grasp how CoreForge works in just a few minutes. When building software, developers often face a huge pain: wasting weeks re-setting up, configuring, and building from scratch basic features like Login or Security for every single project.",
+        "intro_p2": "If a software project is like a car, CoreForge is the premium parts factory. We don't sell you a whole locked car you can't fix. Instead, we give you the best steering wheels, engines, and LCD screens. You take them and build your own custom car. You own 100% of it.",
+        "intro_why_title": "Why not use existing libraries (NPM/Nuget)?",
+        "intro_why_p1": "Using existing packages (from NPM or NuGet) is common, but they have a fatal flaw: **You do not own their code**. It is a 'black box'. If one day you need to tweak a deeply nested logic, you can't. If the creator stops maintaining it, your project is trapped.",
+        "intro_why_p2": "CoreForge follows an entirely different philosophy. Instead of downloading a closed binary or package, our tool will **copy high-quality source code directly into your project's disk drive**. From that second, the code is yours. You can open it, read it, and modify it endlessly.",
+        "intro_features_title": "Absolute Highlights",
+        "intro_feat1_title": "Data Sovereignty",
+        "intro_feat1_desc": "All logic and code live on your machine. There are no hidden API calls back to our servers.",
+        "intro_feat2_title": "Clean & Standardized",
+        "intro_feat2_desc": "The code is written beautifully, adheres to SOLID principles, and is incredibly easy to maintain and scale.",
+        "install_title": "Installation & Setup",
+        "install_p1": "You don't need to clone a heavy boilerplate. You just use our CLI to 'pull' the exact piece of code you need into your existing project.",
+        "install_req": "System Requirements",
+        "install_req_desc": "For the best experience, your machine should have:",
+        "install_step1": "1. Install CoreForge CLI",
+        "install_step1_desc": "You need to use Go to download and install our CLI as a global tool on your machine:",
+        "install_step2": "2. Initialization & Configuration (init)",
+        "install_step2_desc": "Open your terminal at the root of your project and run the init command. An interactive configuration interface (TUI) will prompt you for details about your stack (Language, Framework, Database, ORM, etc.). The CLI will save these settings into `forge.json` automatically.",
+        "install_step3": "3. Install your First Component",
+        "install_step3_desc": "Now you are ready! Try pulling a basic component like the Global Error Handler. The source code will automatically drop into the correct folder.",
+        "install_step4": "4. Freely Customize",
+        "install_step4_desc": "Once the command finishes, open your project. You'll see brand new source code files. Open them up, read them, and tweak whatever you like.",
+        "uc_title": "What exactly is a Component?",
+        "uc_p1": "If you are not a developer, words like 'Component' might sound complicated. But in reality, it's simply a 'Text file with rules' (Code File) that someone else already wrote perfectly for you.",
+        "uc_how_title": "1. What happens when you download it?",
+        "uc_how_desc": "Imagine you need to add a 'Door Lock' to your house (Password Login). Instead of googling how locks work and building one from scratch... You just type `coreforge add password-hashing`.",
+        "uc_how_desc2": "At this point, CoreForge doesn't install any mysterious black-box software. It simply connects to our vault, grabs the text document containing the world's most secure door lock manual, and creates a `passwordHashing.js` (or C#, Go) file right inside your project.",
+        "uc_use_title": "2. How to use it?",
+        "uc_use_desc": "Now you open that file. It sits perfectly in your folder, looking exactly like your teammate just typed it out yesterday. Even the comments are there. The beauty is:",
+        "uc_benefit1": "You can read it to understand exactly how it works.",
+        "uc_benefit2": "You can connect it to your main program and use it instantly.",
+        "uc_benefit3": "You can change anything. If the original code says 'Wrong password', you have every right to open the file and change it to 'Oops, try again buddy 😘' without any platform blocking you.",
+        "uc_summary_title": "Summary",
+        "uc_summary": "In short, CoreForge is like the best movie script library. When you need to play the role of Login, we hand you the perfect script. How you act it out, and how you change the dialogue is entirely up to you. You are never trapped in an ecosystem!"
+    },
+    "DocsSidebar": {
+        "gettingStarted": "Getting Started",
+        "introduction": "Introduction",
+        "installation": "Installation",
+        "understandingComponents": "Components Guide",
+        "categories": {
+            "Auth": "Auth",
+            "Documentation": "Documentation",
+            "Middleware": "Middleware",
+            "Utility": "Utility"
+        },
+        "components": {
+            "generate-otp": "Generate OTP",
+            "jwt-auth": "JWT Auth",
+            "password-hashing": "Password Hashing",
+            "rbac": "RBAC",
+            "swagger-docs": "Swagger Docs",
+            "async-handler": "Async Handler",
+            "cors": "CORS",
+            "error-handler": "Error Handler",
+            "logger": "Logger",
+            "not-found-handler": "Not Found Handler",
+            "rate-limiter": "Rate Limiter",
+            "security-headers": "Security Headers",
+            "validation": "Validation",
+            "pagination": "Pagination",
+            "shutdown-handler": "Shutdown Handler"
+        }
+    },
+    "ComponentsList": {
+        "title": "Components",
+        "description": "Beautifully designed backend components that you can copy and paste into your apps.",
+        "categories": {
+            "auth": "Auth",
+            "middleware": "Middleware",
+            "utility": "Utility",
+            "utilities": "Utilities",
+            "database": "Database",
+            "general": "General",
+            "documentation": "Documentation",
+            "communication": "Communication",
+            "message-broker": "Message Broker",
+            "observability": "Observability",
+            "payment": "Payment",
+            "real-time": "Real-time",
+            "search": "Search",
+            "security": "Security",
+            "storage": "Storage"
+        }
+    }
+}

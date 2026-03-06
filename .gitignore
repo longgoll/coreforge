@@ -1,0 +1,61 @@
+# Binaries
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+forge-cli
+
+# Test binary
+*.test
+
+# Output of go coverage tool
+*.out
+
+# Go workspace file
+go.work
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Build output
+dist/
+build/
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Go vendor directory
+vendor/
+
+# Test coverage reports
+coverage.html
+
+# Additional project binaries
+coreforge
+main
+
+# Auto-generated manifest (built by: go run mock-registry/build_manifest.go)
+mock-registry/manifest.json
+
+# Resolved artifact files
+*.resolved
+
+# Dependencies
+node_modules/
+package-lock.json
+bin/
+obj/
+
+# Local testing
+test-project/
